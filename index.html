@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="homerectangle" id="homerect">
+            <div class="rectangle1">
+                <div class="homeicon">
+                    <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div  id="main">
+            <div class="searchbar" id="searchbar">
+
+                <div class="icon">
+                    <button class="fa-solid fa-magnifying-glass" style="color: #000000;" type="submit" id="submit"
+                        type="submit" id="submit"></button>
+                </div>
+                <input class="search" input="text" id="city" placeholder="Search places">
+
+                </input>
+
+                <div id="menu" onclick="onclickmenu()" onclick="style()">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+
+            </div>
+
+            <div class="firstdiv" id="firstdiv">
+
+                <div class="firstdiv1">
+
+                    <div class="firstdiv1content">
+                        <div class="firstdiv1contenttext1">
+                            <span id="cityName">Sindri</span>'s Weather
+                        </div>
+
+                        <div class="firstdiv1contenttext2">
+                            <p>How is The Weather Today?</p>
+                        </div>
+
+
+                        <div class="firstdiv1contentbox">
+                            <div class="sunimage">
+                                <img src="image 1401.png" height="40px">
+
+                            </div>
+                            <div class="temperature">
+                                <div class="temperatureint">
+                                    <span id="temp"></span>&#8451;
+                                </div>
+
+                                <span id="partlycloudy">Sunny Cloudy</span>
+
+                            </div>
+
+
+                        </div>
+                        <div class="firstdiv1contentboxes">
+                            <div id="box1">
+                                <P>Cloud PCT</P>
+                                <p><span id="cloud_pct"></span></p>
+
+                            </div>
+                            <div id="box2">
+                                <P>Wind Speed</P>
+                                <p><span id="wind_speed"></span> Kmph</p>
+
+                            </div>
+                            <div id="box3">
+                                <P>Humidity</P>
+                                <span id="humidity"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="firstdiv2">
+                    <div class="firstdiv2content">
+                        <div class="firstdiv1contenttext1">
+                            <span>Stats</span>
+                        </div>
+
+                        <div class="firstdiv1contenttext2">
+                            <p>Maximum And Minimum Temperature</p>
+                        </div>
+                        <div class="firstdiv1contentimages">
+                            <div class="firstimage">
+                                <img src="image 1412.png" height="70px">
+                                <span id="max_temp"></span>&#8451;
+
+                            </div>
+                            <div class="firstimage">
+                                <img src="image 1402.png" height="70px">
+                                <span id="min_temp"></span>&#8451;
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="seconddiv" id="seconddiv">
+                <div class="seconddiv1">
+                    <span id="seconddiv1heading">How about the temperature today?</span>
+                    <div class="seconddiv1boxes">
+                        <div class="seconddiv1box">
+
+                            <div class="seconddiv1boximage">
+                                <img src="Group 48096601.png" height="40px" id="image1">
+                            </div>
+                            <div class="seconddiv1boxcircle">
+
+                            </div>
+
+                            <div class="seconddiv1boxtemp"><span>32</span>&#8451;
+                            </div>
+                            <div class="seconddivboxtime">
+                                Morning
+
+                            </div>
+
+                        </div>
+                        <div class="seconddiv1box">
+
+                            <div class="seconddiv1boximage">
+                                <img src="Group 48096600.png" height="40px" id="image2">
+                            </div>
+                            <div class="seconddiv1boxcircle" id="circle2">
+
+                            </div>
+
+                            <div class="seconddiv1boxtemp"><span>32</span>&#8451;
+                            </div>
+                            <div class="seconddivboxtime">
+                                Afternoon
+
+                            </div>
+                        </div>
+                        <div class="seconddiv1box" id="seconddiv1box3">
+
+                            <div class="seconddiv1boximage">
+                                <img src="Group 48096598.png" height="40px" id="image3">
+                            </div>
+                            <div class="seconddiv1boxcircle" id="circle3">
+
+                            </div>
+
+                            <div class="seconddiv1boxtemp"><span>32</span>&#8451;
+                            </div>
+                            <div class="seconddivboxtime">
+                                Evening
+                            </div>
+                        </div>
+                        <div class="seconddiv1box" id="seconddiv1box4">
+
+                            <div class="seconddiv1boximage">
+                                <img src="Group 48096599.png" height="40px" id="image4">
+                            </div>
+                            <div class="seconddiv1boxcircle" id="circle4">
+
+                            </div>
+
+                            <div class="seconddiv1boxtemp"><span>32</span>&#8451;
+                            </div>
+                            <div class="seconddivboxtime">
+                                Night
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="seconddiv2">
+                    <div class="seconddiv2in">
+                        <span id="weatherprediction">Weather Prediction</span>
+                        <div class="seconddiv2inbox">
+                            <div class="seconddiv2inboxcloudy">
+                                <img src="image 1404.png" height="50px">
+                                <div class="secondiv2incloudycontent">
+                                    <span class="cloudy">Cloudy</span>
+                                    <span class="date">Nov 23</span>
+                                </div>
+                            </div>
+                            <div class="seconddiv2intemp">
+
+                                <span class="mintemp">26&#8451;</span>/
+                                <span class="maxtemp">32&#8451;</span>
+
+                            </div>
+                        </div>
+                        <div class="seconddiv2inbox">
+                            <div class="seconddiv2inboxcloudy">
+
+                                <img src="image 1412.png" height="50px">
+                                <div class="secondiv2incloudycontent">
+                                    <span class="cloudy">Sunny</span>
+                                    <span class="date">Nov 22</span>
+                                </div>
+
+
+                            </div>
+                            <div class="seconddiv2intemp">
+                                <span class="mintemp">26&#8451;</span>/
+                                <span class="maxtemp">32&#8451;</span>
+                            </div>
+                        </div>
+                        <div class="seconddiv2inbox" id="lastseconddiv2inbox">
+                            <div class="seconddiv2inboxcloudy">
+
+                                <img src="image 1412.png" height="50px">
+                                <div class="secondiv2incloudycontent">
+                                    <span class="cloudy">Sunny</span>
+                                    <span class="date">Nov 20</span>
+                                </div>
+
+                            </div>
+                            <div class="seconddiv2intemp">
+                                <span class="mintemp">26&#8451;</span>/
+                                <span class="maxtemp">32&#8451;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="sideview">
+            <div class="bell">
+                <div class="bellicon">
+                    <i class="fa-solid fa-bell fa-xl" style="color: #ffc700;"></i>
+                </div>
+
+            </div>
+            <div class="sunrise">
+                <span id="textsunrise">Sunrise and Sunset</span>
+                <div class="country">
+                    <div class="india">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot "></i>
+                            <span id="cityname2"></span>
+                        </div>
+                        <div class="3dots">
+                            <i class="fa-solid fa-ellipsis-vertical "></i>
+                        </div>
+                        
+                    </div>
+                    <div class="sunriseset">
+                        <div class="sunriseimage">
+                            <div class="imagerise">
+                                <img src="image 1412.png" height="40px">
+                            </div>
+                            <div class="time">
+                                <span id="sunrise"></span>
+                                <span>Sunrise</span>
+                            </div>
+                        </div>
+                        <div class="sunsetimage">
+                            <div class="sunriseimage">
+                                <div class="imagerise">
+                                    <img src="image 1402.png" height="40px">
+                                </div>
+                                <div class="time">
+                                    <span id="sunset"></span>
+                                    <span>Sunset</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="country"><div class="india">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot "></i>
+                            <span >New York</span>
+                        </div>
+                        <div class="3dots">
+                            <i class="fa-solid fa-ellipsis-vertical "></i>
+                        </div>
+                        
+                    </div>
+                    <div class="sunriseset">
+                        <div class="sunriseimage">
+                            <div class="imagerise">
+                                <img src="image 1412.png" height="40px">
+                            </div>
+                            <div class="time">
+                                <span id="sunrisenewyork"></span>
+                                <span>Sunrise</span>
+                            </div>
+                        </div>
+                        <div class="sunsetimage">
+                            <div class="sunriseimage">
+                                <div class="imagerise">
+                                    <img src="image 1402.png" height="40px">
+                                </div>
+                                <div class="time">
+                                    <span></span>
+                                    <span>Sunset</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="country" id="addcountry">
+                    <span><i class="fa-solid fa-plus " style="color: #ffc700;"></i> Add Country</span>
+                </div>
+
+            </div>
+            <div class="chancetorain">
+                <div class="headingchancetorain">
+                    <span id="chancetoraintext">Chane To Rain</span>
+                    <i id="graphicon" class="fa-solid fa-chart-column"></i>
+                </div>
+                <div class="graphs">
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar1"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar2"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar3"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar4"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar5"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar6"></div>
+                    </div>
+                    <div  class="linebar">
+                        <div class="innerlinebar" id="linebar7"></div>
+                    </div>
+                </div>
+                <div class="days">
+                    <div class="day" id="sun">S</div>
+                    <div class="day" id="mon">M</div>
+                    <div class="day" id="tue">T</div>
+                    <div class="day" id="wed">W</div>
+                    <div class="day" id="thu">T</div>
+                    <div class="day" id="fri">F</div>
+                    <div class="day" id="sat">S</div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/af27657c8f.js" crossorigin="anonymous"></script>
+
+</html>
